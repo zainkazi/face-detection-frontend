@@ -1,0 +1,15 @@
+.detect-button {
+  border: none;
+}
+
+.detect-button:hover {
+  background-color: gray;
+  transition-duration: 0.2s;
+}
+
+.link-input {
+  padding: 6px;
+  width: 600px;
+  border: 2px solid black;
+  color: rgba(0, 0, 0, 0.8);
+}
