@@ -67,13 +67,16 @@ function App() {
       .then((faceData) => {
         if (faceData) {
           if (faceData.status.description === "Ok") {
-            fetch("https://damp-ocean-77297.herokuapp.com/image", {
-              method: "PUT",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                id: user.id,
-              }),
-            })
+            fetch(
+              "https://face-recognition-backend-production.up.railway.app/image",
+              {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  id: user.id,
+                }),
+              }
+            )
               .then((response) => response.json())
               .then((count) => {
                 setUser({ ...user, entries: count });

@@ -18,15 +18,18 @@ const Register = ({ changeRoute, loadUser }) => {
   };
 
   const onRegisterSubmit = () => {
-    fetch("https://damp-ocean-77297.herokuapp.com/register", {
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: registerName,
-        email: registerEmail,
-        password: registerPassword,
-      }),
-    })
+    fetch(
+      "https://face-recognition-backend-production.up.railway.app/register",
+      {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: registerName,
+          email: registerEmail,
+          password: registerPassword,
+        }),
+      }
+    )
       .then((response) => response.json())
       .then((user) => {
         if (user.id) {

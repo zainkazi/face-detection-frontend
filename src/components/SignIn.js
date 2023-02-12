@@ -13,7 +13,7 @@ const SignIn = ({ changeRoute, loadUser }) => {
   };
 
   const onSignInSubmit = () => {
-    fetch("https://damp-ocean-77297.herokuapp.com/signin", {
+    fetch("https://face-recognition-backend-production.up.railway.app/signin", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
